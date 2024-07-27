@@ -3,54 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - CV ADIKA PUTRA MAULANA</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CV - Adika Putra Maulana</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('https://cdn.prod.website-files.com/65bfb4d60a2749f5209ee071%2F667ab738ff1bce6ac0ef8ffc_particle%20%283%29-transcode.mp4') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 50px; /* Adjust the width as needed */
+            height: auto;
+        }
+        .navbar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        .intro {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .intro span {
+            color: #00ADEF;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .social-icons a {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Video Background -->
-    <video autoplay muted loop class="video-background">
-        <source src="https://cdn.prod.website-files.com/65bfb4d60a2749f5209ee071%2F667ab738ff1bce6ac0ef8ffc_particle%20%283%29-transcode.mp4" type="video/mp4">
-    </video>
-
     <header>
-        <nav>
-            <div class="logo">ADIKA PUTRA MAULANA</div>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="profile.html">PROFILE</a></li>
-                <li><a href="education.html">EDUCATION</a></li>
-                <li><a href="skills.html">SKILLS</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="fade-in">
-            <div class="container">
-                <h1>Welcome to My CV</h1>
-                <p class="subheading">Hello, my name is Adika Putra Maulana.<br>Welcome to my online CV where you can find information about my education, skills, projects, and contact details.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Adika Putra Maulana. All rights reserved.</p>
+        <div class="navbar">
+            <img src="https://img.freepik.com/premium-ai-image/futuristic-neon-logo-with-cyberpunk-style-ai-generated_69985404.htm" alt="Logo" class="logo">
+            <nav>
+                <a href="#home">HOME</a>
+                <a href="#profile">PROFILE</a>
+                <a href="#education">EDUCATION</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
         </div>
-    </footer>
-
-    <!-- Social Media Widgets -->
-    <div class="social-widgets">
-        <a href="https://www.instagram.com/yourusername" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+    </header>
+    <div class="container">
+        <div class="intro">
+            WELCOME TO MY CV <span>|</span><br>
+            Hello, my name is Adika Putra Maulana.<br>
+            Welcome to my online CV where you can find information about my education, skills, projects, and contact details.
+        </div>
+    </div>
+    <div class="footer">
+        © 2024 Adika Putra Maulana. All rights reserved.
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Instagram_icon-icons.com_66804.png" alt="Instagram" width="50">
         </a>
-        <a href="https://t.me/slyntherinnn" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram" class="social-icon">
+        <a href="https://t.me/yourprofile" target="_blank">
+            <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/telegram_logo_icon_137103.png" alt="Telegram" width="50">
         </a>
     </div>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
