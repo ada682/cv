@@ -64,7 +64,8 @@ main {
 main .container {
     max-width: 800px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    /* Remove background color */
+    background: none;
     border-radius: 10px;
 }
 
