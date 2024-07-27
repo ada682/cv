@@ -25,15 +25,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build the project
-        run: npm run build || echo 'No build step defined'
+      # Comment this out if you don't have a build step
+      # - name: Build the project
+      #   run: npm run build || echo 'No build step defined'
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
-          path: |
-            ./  # Adjust this if your build output is in a different directory
+          path: ./
           if-no-files-found: error
 
   deploy:
@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: github-pages-artifact
-          path: .  # Adjust this if your build output is in a different directory
+          path: ./
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
