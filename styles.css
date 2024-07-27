@@ -1,46 +1,36 @@
-/* Reset CSS */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background: #333;
     color: #fff;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 10px 0;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    margin: auto;
+    padding: 0 20px;
 }
 
 header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 24px;
 }
 
 header ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
 header ul li {
-    margin-left: 20px;
+    margin: 0 10px;
 }
 
 header ul li a {
@@ -48,84 +38,34 @@ header ul li a {
     text-decoration: none;
 }
 
-header ul li a:hover {
-    text-decoration: underline;
-}
-
-header .menu-icon {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
+main {
+    padding: 20px;
 }
 
 .container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-.profile-image {
-    float: left;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #555;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
+    padding: 10px 0;
+    position: fixed;
     width: 100%;
+    bottom: 0;
 }
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    animation: fadeIn 1s forwards;
 }
 
-.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-    header ul {
-        display: none;
-        flex-direction: column;
-    }
-
-    header ul.show {
-        display: flex;
-    }
-
-    header .menu-icon {
-        display: block;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }
