@@ -32,7 +32,9 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
-          path: .  # Adjust this if your build output is in a different directory
+          path: |
+            ./  # Adjust this if your build output is in a different directory
+          if-no-files-found: error
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,4 +53,3 @@ jobs:
         uses: actions/deploy-pages@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: github-pages-artifact
