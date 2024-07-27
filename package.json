@@ -1,13 +1,5 @@
 {
-  "name": "cv",
-  "version": "1.0.0",
-  "description": "CV project",
-  "main": "index.js",
   "scripts": {
-    "build": "echo 'No build step defined'",
-    "start": "echo 'Start script not defined'"
-  },
-  "author": "ada682",
-  "license": "MIT",
-  "dependencies": {}
+    "build": "your-build-command --output ./build"
+  }
 }
