@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write  # Add this line to grant id-token permission
+  contents: read   # This is typically included to read repository contents
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,20 +21,14 @@ jobs:
       run: |
         # Your build commands here
 
-    - name: Upload Artifact 1
+    - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: github-pages-artifact-1
-        path: path/to/your/artifact1
-
-    - name: Upload Artifact 2
-      uses: actions/upload-artifact@v2
-      with:
-        name: github-pages-artifact-2
-        path: path/to/your/artifact2
+        name: github-pages-artifact
+        path: path/to/your/build/artifacts
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifact_name: github-pages-artifact-1  # or github-pages-artifact-2
+        artifact_name: github-pages-artifact
