@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* Video background */
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove background from text containers and change text color */
+.container {
+    background: none;
+    color: white;
+    font-family: 'Arial', sans-serif; /* Change the font to your preferred one */
+}
+
+/* Change the font and color of headings */
+h2 {
+    font-family: 'Arial', sans-serif; /* Change the font to your preferred one */
+    color: white;
+}
+
+/* Social media widgets */
+.social-widgets {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-widgets a {
+    display: block;
+    margin: 10px 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-widgets a.instagram {
+    background-color: #C13584; /* Instagram color */
+    color: white;
+}
+
+.social-widgets a.telegram {
+    background-color: #0088cc; /* Telegram color */
+    color: white;
+}
+
+/* Ensure footer text is at the bottom */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000; /* Optional: Add background color to footer */
+    color: white;
+}
