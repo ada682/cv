@@ -29,13 +29,13 @@ jobs:
         run: npm run build
 
       - name: List directory contents after build
-        run: ls -alh
+        run: ls -alh ./build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
-          path: ./build  # Assuming the build output is in the "build" directory
+          path: ./build
           if-no-files-found: error
 
   deploy:
