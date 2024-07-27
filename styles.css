@@ -39,25 +39,12 @@ h2 {
 .social-widgets a {
     display: block;
     margin: 10px 0;
+}
+
+.social-widgets img.social-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: white;
-    text-align: center;
-    line-height: 40px;
-    color: #000;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.social-widgets a.instagram {
-    background-color: #C13584; /* Instagram color */
-    color: white;
-}
-
-.social-widgets a.telegram {
-    background-color: #0088cc; /* Telegram color */
-    color: white;
 }
 
 /* Ensure footer text is at the bottom */
