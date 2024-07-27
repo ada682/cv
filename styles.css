@@ -1,101 +1,117 @@
-/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
 
-/* Video background */
 .video-background {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    left: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
 }
 
-.content {
-    position: relative;
-    z-index: 1;
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* Remove background from text containers and change text color */
-.container {
-    background: none;
-    color: white;
-    font-family: 'Arial', sans-serif; /* Change the font to your preferred one */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* Change the font and color of headings */
-h2 {
-    font-family: 'Arial', sans-serif; /* Change the font to your preferred one */
-    color: white;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-/* Social media widgets */
-.social-widgets {
-    position: fixed;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+nav ul li {
+    margin-left: 20px;
 }
 
-.social-widgets a {
-    display: block;
-    margin: 10px 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
-    text-align: center;
-    line-height: 40px;
-    color: #000;
-    font-size: 20px;
+nav ul li a {
     text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
-.social-widgets a.instagram {
-    background-color: #C13584; /* Instagram color */
-    color: white;
+nav ul li a:hover {
+    color: #00aaff;
 }
 
-.social-widgets a.telegram {
-    background-color: #0088cc; /* Telegram color */
-    color: white;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
 }
 
-/* Ensure footer text is at the bottom */
+main .container {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+p.subheading {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1, p.subheading {
+    display: inline-block;
+    font-weight: normal;
+    color: #fff;
+}
+
+h1::after {
+    content: '|';
+    color: #00aaff;
+    margin-left: 10px;
+}
+
+p.subheading span {
+    color: #00aaff;
+}
+
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
-    background-color: #000; /* Optional: Add background color to footer */
-    color: white;
 }
 
-/* Navigation button styles */
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    border: 2px solid #0088cc;
-    border-radius: 25px;
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s;
+.social-widgets {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.nav-button:hover {
-    background-color: #0088cc;
-    color: white;
-}
-
-/* Aligning buttons in a container */
-.nav-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.nav-container a {
-    margin: 0 10px;
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
 }
