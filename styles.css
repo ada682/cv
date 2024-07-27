@@ -39,12 +39,25 @@ h2 {
 .social-widgets a {
     display: block;
     margin: 10px 0;
-}
-
-.social-widgets img.social-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-widgets a.instagram {
+    background-color: #C13584; /* Instagram color */
+    color: white;
+}
+
+.social-widgets a.telegram {
+    background-color: #0088cc; /* Telegram color */
+    color: white;
 }
 
 /* Ensure footer text is at the bottom */
@@ -56,4 +69,33 @@ footer {
     padding: 10px 0;
     background-color: #000; /* Optional: Add background color to footer */
     color: white;
+}
+
+/* Navigation button styles */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #0088cc;
+    border-radius: 25px;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #0088cc;
+    color: white;
+}
+
+/* Aligning buttons in a container */
+.nav-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-container a {
+    margin: 0 10px;
 }
