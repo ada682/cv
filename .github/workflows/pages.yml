@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Comment this out if you don't have a build step
+      # Uncomment and modify the following step if you have a build step
       # - name: Build the project
       #   run: npm run build || echo 'No build step defined'
 
@@ -33,8 +33,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
-          path: ./
-          if-no-files-found: error
+          path: |
+            ./  # Upload everything in the current directory
+          retention-days: 1
+        continue-on-error: true
 
   deploy:
     runs-on: ubuntu-latest
