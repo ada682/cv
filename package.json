@@ -1,20 +1,13 @@
 {
   "name": "cv",
   "version": "1.0.0",
-  "description": "CV of Adika Putra Maulana",
+  "description": "CV project",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --port=8080",
-    "build": "echo 'No build step defined'"
+    "build": "echo 'No build step defined'",
+    "start": "echo 'Start script not defined'"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ada682/cv.git"
-  },
-  "author": "Adika Putra Maulana",
+  "author": "ada682",
   "license": "MIT",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+  "dependencies": {}
 }
-
