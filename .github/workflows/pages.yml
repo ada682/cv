@@ -36,7 +36,6 @@ jobs:
         with:
           name: github-pages-artifact
           path: ./build
-          if-no-files-found: error
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,9 +50,6 @@ jobs:
         with:
           name: github-pages-artifact
           path: ./
-
-      - name: List directory contents after download
-        run: ls -alh
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
