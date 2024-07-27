@@ -30,3 +30,7 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+
+function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('show');
+}
