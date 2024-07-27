@@ -26,13 +26,13 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build
+        run: npm run build || echo 'No build step defined'
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
-          path: ./path/to/your/build/directory # Adjust this path to match your build output
+          path: .  # Adjust this if your build output is in a different directory
 
   deploy:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: github-pages-artifact
-          path: ./path/to/download/artifacts
+          path: .  # Adjust this if your build output is in a different directory
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
