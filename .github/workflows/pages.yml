@@ -28,20 +28,20 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: List directory contents
+      - name: List directory contents after build
         run: ls -alh
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
-          path: |
-            ./  # Upload everything in the current directory except .git and node_modules
-          retention-days: 1
+          path: ./build  # Assuming the build output is in the "build" directory
+          if-no-files-found: error
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
           name: github-pages-artifact
           path: ./
 
-      - name: List directory contents
+      - name: List directory contents after download
         run: ls -alh
 
       - name: Deploy to GitHub Pages
