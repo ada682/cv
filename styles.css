@@ -1,97 +1,57 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff; /* Set text color to white */
+/* Add these styles to your existing styles.css */
+
+/* Remove background from text containers and change text color */
+.container {
+    background: none;
+    color: white;
+    font-family: 'Arial', sans-serif; /* Change the font to your preferred one */
 }
 
-.video-background {
+/* Change the font and color of headings */
+h2 {
+    font-family: 'Arial', sans-serif; /* Change the font to your preferred one */
+    color: white;
+}
+
+/* Social media widgets */
+.social-widgets {
     position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-video {
-    position: absolute;
+    right: 10px;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    transform: translateY(-50%);
 }
 
-header {
-    background: rgba(51, 51, 51, 0.8); /* semi-transparent background */
-    color: #fff;
-    padding: 10px 0;
-    position: relative;
-    z-index: 2;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-header .logo {
-    font-size: 24px;
-}
-
-header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header ul li {
-    margin: 0 10px;
-}
-
-header ul li a {
-    color: #fff;
+.social-widgets a {
+    display: block;
+    margin: 10px 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-size: 20px;
     text-decoration: none;
 }
 
-main {
-    padding: 20px;
-    position: relative;
-    z-index: 1;
+.social-widgets a.instagram {
+    background-color: #C13584; /* Instagram color */
+    color: white;
 }
 
-.container {
-    background: transparent; /* Remove background color */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: none; /* Remove box shadow */
-    position: relative;
-    z-index: 1;
+.social-widgets a.telegram {
+    background-color: #0088cc; /* Telegram color */
+    color: white;
 }
 
+/* Ensure footer text is at the bottom */
 footer {
-    background: rgba(51, 51, 51, 0.8); /* semi-transparent background */
-    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 2;
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    background-color: #000; /* Optional: Add background color to footer */
+    color: white;
 }
