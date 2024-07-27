@@ -25,18 +25,19 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Uncomment and modify the following step if you have a build step
-      # - name: Build the project
-      #   run: npm run build || echo 'No build step defined'
+      - name: Build the project
+        run: npm run build
+
+      - name: List directory contents
+        run: ls -alh
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: github-pages-artifact
           path: |
-            ./  # Upload everything in the current directory
+            ./  # Upload everything in the current directory except .git and node_modules
           retention-days: 1
-        continue-on-error: true
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,6 +51,9 @@ jobs:
         with:
           name: github-pages-artifact
           path: ./
+
+      - name: List directory contents
+        run: ls -alh
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
