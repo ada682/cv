@@ -1,14 +1,14 @@
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Dropdown menu
-        var menuToggle = document.getElementById('menu-toggle');
-        var menu = document.getElementById('menu');
+    document.addEventListener("DOMContentLoaded", function() {
+        var menuToggle = document.querySelector(".logo"); // Update to select the correct element
+        var menu = document.querySelector("nav ul");
 
-        menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+        menuToggle.addEventListener("click", function() {
+            menu.classList.toggle("active");
         });
+    });
 
+    document.addEventListener('DOMContentLoaded', function() {
         // Scroll animation
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('nav ul li a');
