@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var menuToggle = document.getElementById("menu-toggle");
-    var menu = document.getElementById("menu");
+    var menuToggle = document.querySelector(".logo");
+    var menu = document.querySelector("nav ul.menu");
 
     menuToggle.addEventListener("click", function() {
-        menu.classList.toggle("active");
+        menu.classList.toggle("show");
     });
 });
