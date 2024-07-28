@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Adika Putra Maulana</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: black; /* Solid black background */
+        }
+        .container {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 50px; /* Adjust the width as needed */
+            height: auto;
+        }
+        .navbar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        .intro {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .intro span {
+            color: #00ADEF;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .social-icons a {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,20 +71,23 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="container">
-            <h1>WELCOME TO MY CV</h1>
-            <p class="subheading">Hello, my name is Adika Putra Maulana. Welcome to my online CV where you can find information about my education, skills, projects, and contact details.</p>
+    <div class="container">
+        <div class="intro">
+            WELCOME TO MY CV <span>|</span><br>
+            Hello, my name is Adika Putra Maulana.<br>
+            Welcome to my online CV where you can find information about my education, skills, projects, and contact details.
         </div>
-    </main>
-    <video autoplay muted loop class="video-background">
-        <source src="https://cdn.prod.website-files.com/65bfb4d60a2749f5209ee071%2F667ab738ff1bce6ac0ef8ffc_particle%20%283%29-transcode.mp4" type="video/mp4">
-    </video>
-    <div id="slideBox" class="slide-box">
-        <p>Log In / Log Out</p>
-        <div id="codeBox" class="code-box typing"></div>
     </div>
-    <button id="toggleButton" class="toggle-button">Toggle Box</button>
-    <script src="script.js"></script>
+    <div class="footer">
+        © 2024 Adika Putra Maulana. All rights reserved.
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Instagram_icon-icons.com_66804.png" alt="Instagram" width="50">
+        </a>
+        <a href="https://t.me/yourprofile" target="_blank">
+            <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/telegram_logo_icon_137103.png" alt="Telegram" width="50">
+        </a>
+    </div>
 </body>
 </html>
