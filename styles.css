@@ -167,3 +167,14 @@ footer {
         height: 30px;
     }
 }
+
+/* New Media Queries for Specific Fixes */
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 10px; /* More padding for smaller screens */
+    }
+
+    nav ul li {
+        margin-left: 10px; /* Reduce margin for smaller screens */
+    }
+}
