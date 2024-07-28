@@ -13,30 +13,27 @@
     </video>
 
     <header>
-        <div class="logo">+</div>
         <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="profile.html">PROFILE</a></li>
-                <li><a href="education.html">EDUCATION</a></li>
-                <li><a href="skills.html">SKILLS</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
+            <div class="menu-container">
+                <button id="menu-toggle">+</button>
+                <ul id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="container">
-            <!-- Empty container for the initial view -->
-        </section>
-
-        <section id="bottom-section">
-            <h1>Welcome to My CV</h1>
-            <p class="subheading">
-                Hello, my name is Adika Putra Maulana.<br>
-                Welcome to my online CV where you can find information about my education, skills, projects, and contact details.
-            </p>
+        <section id="home" class="fade-in">
+            <div class="container">
+                <h1>Welcome to My CV</h1>
+                <p class="subheading">Hello, my name is Adika Putra Maulana.<br>Welcome to my online CV where you can find information about my education, skills, projects, and contact details.</p>
+            </div>
         </section>
     </main>
 
@@ -55,5 +52,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram" class="social-icon">
         </a>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
