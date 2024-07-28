@@ -85,6 +85,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 100px; /* Adjust to ensure content is scrollable */
 }
 
 #bottom-section h1, #bottom-section p {
