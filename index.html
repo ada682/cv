@@ -5,6 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - CV Adika Putra Maulana</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px; /* Added padding to avoid content touching edges */
+        }
+
+        main .container {
+            max-width: 800px;
+            padding: 20px;
+            background: none; /* Remove background color */
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p.subheading {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        h1, p.subheading {
+            display: inline-block;
+            font-weight: normal;
+            color: #fff;
+        }
+
+        h1::after {
+            content: '|';
+            color: #00aaff;
+            margin-left: 10px;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        p.subheading span {
+            color: #00aaff;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .social-widgets {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            #menu-toggle {
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+
+            #menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p.subheading {
+                font-size: 16px;
+            }
+
+            .social-widgets {
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                height: auto;
+                padding: 10px;
+                overflow-y: scroll; /* Allow scrolling */
+            }
+
+            main .container {
+                margin-top: auto;
+            }
+        }
+
+        /* New Media Queries for Specific Fixes */
+        @media only screen and (max-width: 768px) {
+            main {
+                padding: 10px; /* More padding for smaller screens */
+            }
+
+            nav ul li {
+                margin-left: 10px; /* Reduce margin for smaller screens */
+            }
+        }
+
+        /* CSS for Dropdown Menu */
+        #menu-toggle.active + #menu {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
     <!-- Video Background -->
@@ -13,15 +222,16 @@
     </video>
 
     <header>
+        <div class="logo">My Logo</div>
         <nav>
-            <div class="logo">+</div>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="profile.html">PROFILE</a></li>
-                <li><a href="education.html">EDUCATION</a></li>
-                <li><a href="skills.html">SKILLS</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+            <button id="menu-toggle">+</button>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -51,6 +261,16 @@
         </a>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuToggle = document.getElementById("menu-toggle");
+            var menu = document.getElementById("menu");
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
