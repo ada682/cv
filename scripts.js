@@ -14,4 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', changeLinkState);
     changeLinkState();
+
+    // Slide box animation
+    const slideBox = document.getElementById('slideBox');
+    const toggleButton = document.getElementById('toggleButton');
+
+    // Otomatis membuka kotak saat halaman dimuat
+    setTimeout(() => {
+        slideBox.classList.add('open');
+    }, 500);
+
+    toggleButton.addEventListener('click', () => {
+        slideBox.classList.toggle('open');
+    });
 });
